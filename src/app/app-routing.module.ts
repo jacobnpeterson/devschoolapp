@@ -3,10 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { SkillComponent } from './skill/skill.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { EndorseComponent } from './endorse/endorse.component';
+import { CardComponent } from './card/card.component';
 
 const routes: Routes = [
   { path: 'skill', component: SkillComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 
 ];
