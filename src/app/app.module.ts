@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EndorseComponent } from './endorse/endorse.component';
 import { LoginComponent } from './login/login.component';
+import { PersonRowSmallComponent } from './person-row-small/person-row-small.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     ProfileComponent,
     EndorseComponent,
-    LoginComponent
+    LoginComponent,
+    PersonRowSmallComponent
   ],
   imports: [
     BrowserModule,
