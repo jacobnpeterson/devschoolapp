@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tags } from '../../assets/data/tags';
 
 @Component({
   selector: 'app-profile',
@@ -11,5 +12,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  
 
 }
