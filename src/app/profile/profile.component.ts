@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tags } from '../../assets/data/tags';
+import { AutocompleteComponent } from '../autocomplete/autocomplete.component';
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +12,5 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  
 
 }
