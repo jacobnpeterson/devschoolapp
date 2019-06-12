@@ -12,4 +12,9 @@ export class PersonRowSmallComponent implements OnInit {
   ngOnInit() {
   }
 
+  name = 'Jacob Peterson'
+  cohort = 'C1'
+  market = 'DAL'
+  endorsements = 23
 }
+
