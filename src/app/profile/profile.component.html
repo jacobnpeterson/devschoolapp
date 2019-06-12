@@ -35,14 +35,17 @@
                                     <option>Other</option>
                                 </select>
                             </div>
-                            <form autocomplete="off">
-                                <div class="form-group">
-                                    <label for="tags">Add tags for more specific areas:</label>
-                                    <div class="autocomplete" style="width:300px;">
-                                        <input id="tags-auto" type="text" class="form-control" placeholder="Tags">
+                            <div class="form-group">
+                                <label for="tags">Add tags for more specific areas:</label>
+                                <app-autocomplete></app-autocomplete>
+                                <!-- <div class="card" style="width: 29rem;">
+                                    <div class="card-body">
+                                        <span *ngFor="let tag of tagArray"class="badge badge-pill badge-secondary">
+                                            {{tag}}
+                                        </span>
                                     </div>
-                                </div>
-                            </form>
+                                </div> -->
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">
