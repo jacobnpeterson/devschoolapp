@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   title = 'Fin Overflow';
+
+  @Input() hiddenCheck: boolean;
+
+  // // Hide if current page is Login screen
+  // isHidden() {
+  //   alert("Checking hidden: " + this.hiddenCheck);
+  //   return this.hiddenCheck;
+  // }
 }

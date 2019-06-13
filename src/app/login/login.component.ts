@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -12,4 +12,5 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  loginHidden: boolean = true;
 }
