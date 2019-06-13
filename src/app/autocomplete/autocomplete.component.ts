@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { tags } from '../../assets/data/tags';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-autocomplete',
@@ -31,7 +30,6 @@ export class AutocompleteComponent implements OnInit {
 
   // 1. Erase input text
   // 2. Add tag badge with input text
-  // 3. Add that tag to an array that will be added to JSON
   onEnter() {
 
     // 1. Add tag badge below with input text
