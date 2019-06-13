@@ -1,106 +1,86 @@
 <app-navbar></app-navbar>
 <div class="container">
-        <div class="row">
-                <div class="col-3">
-                    <img src="assets/img/stephen.jfif" class="img-thumbnail" alt="Res Image" style="width:200px;height:200px"/>
-                    <br>
-                    <div class="container">
-                        <br>
-                        <h4>Philadelphia, PA</h4>
-                        <h4>Consultant 1</h4>
-                        <br>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="mailto:s.goddridge@mailbox.net">s.goddridge@mailbox.net</a></li>
-                            <li class="list-group-item"><a href="slack://user?team=T024F3C1G&id=UFEGK6APQ">Slack Message</a></li>
-                            <li class="list-group-item"><a href="">(555) 565-7676</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="border-bottom"><h1>Stephen Godderidge  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Endorse</button></h1></div>
-                    <!-- Endorse Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <!-- <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Endorse Stephen</h5>
+    <div class="row">
+        <div class="col-4">
+            <img [src]="person.photo" class="img-thumbnail" alt="Res Image" style="width:200px;height:200px" />
+            <br>
+            <div class="container">
+                <br>
+                <h4>{{person.market}}</h4>
+                <h4>{{person.cohort}}</h4>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item"><a [href]="'mailto:'+person.email">{{person.email}}</a></li>
+                    <li class="list-group-item"><a [href]="'slack://user?team=T024F3C1G&id='+person.slack">Slack
+                            Message</a>
+                    </li>
+                    <li class="list-group-item"><a href="">{{person.phone}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="border-bottom">
+                <h1>{{person.name}} <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#exampleModal">Endorse</button></h1>
+            </div>
+            <!-- Endorse Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Endorse Stephen</h5>
+                    </div> -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="select_tech">With which technology did Stephen help you?</label>
+                                    <select class="form-control" id="select_tech">
+                                        <option>Angular</option>
+                                        <option>C++</option>
+                                        <option>JavaScript</option>
+                                        <option>MongoDB</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags">Add tags for more specific areas:</label>
+                                    <app-autocomplete (sendTag)="getNewTag($event)"></app-autocomplete>
+                                    <br>
+                                    <!-- <div class="card" style="width: 29rem;">
+                                    <div class="card-body">
+                                        
+                                    </div>
                                 </div> -->
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="select_tech">With which technology did Stephen help you?</label>
-                                            <select class="form-control" id="select_tech">
-                                                <option>Angular</option>
-                                                <option>C++</option>
-                                                <option>JavaScript</option>
-                                                <option>MongoDB</option>
-                                                <option>Other</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tags">Add tags for more specific areas:</label>
-                                            <app-autocomplete (sendTag)="getNewTag($event)"></app-autocomplete>
-                                            <br>
-                                            <span *ngFor="let tag of newTags"class="badge badge-pill badge-secondary">
-                                                {{tag}}
-                                            </span>
-                                        </div>
-                                    </form>
+                                    <span *ngFor="let tag of newTags" class="badge badge-pill badge-secondary">
+                                        {{tag}}
+                                    </span>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success">Endorse</button>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                    </div>
-                    <!-- Skills Column -->
-                    <br>
-                    <div>
-                        <ul class="list-unstyled">
-                            <li class="media">
-                                <img src="assets/img/angular-icon.svg" class="align-self-center mr-3" style="width:64px;height:64px;"/>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-1">Angular Web Framework  <span class="badge badge-success">54</span></h5>
-                                    <span class="badge badge-pill badge-info">native dev</span>
-                                    <span class="badge badge-pill badge-info">machine learning</span>
-                                    <span class="badge badge-pill badge-info">pandas</span>
-                                    <span class="badge badge-pill badge-info">express</span>
-                                    <span class="badge badge-pill badge-info">mysql</span>
-                                </div>
-                            </li>
-                            <br>
-                            <li class="media">
-                                <img src="assets/img/cplusplus.png" class="align-self-center mr-3" style="width:64px;height:64px;"/>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-1">C++  <span class="badge badge-success">20</span></h5>
-                                    <span class="badge badge-pill badge-info">native dev</span>
-                                    <span class="badge badge-pill badge-info">express</span>
-                                    <span class="badge badge-pill badge-info">mysql</span>
-                                </div>
-                            </li>
-                            <br>
-                            <li class="media">
-                                <img src="assets/img/js.png" class="align-self-center mr-3" style="width:64px;height:64px;"/>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-1">JavaScript  <span class="badge badge-success">19</span></h5>
-                                    <span class="badge badge-pill badge-info">machine learning</span>
-                                    <span class="badge badge-pill badge-info">pandas</span>
-                                    <span class="badge badge-pill badge-info">express</span>
-                                </div>
-                            </li>
-                            <br>
-                            <li class="media">
-                                <img src="assets/img/mongodb.png" class="align-self-center mr-3" style="width:64px;height:64px;"/>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-1">MongoDB  <span class="badge badge-success">8</span></h5>
-                                    <span class="badge badge-pill badge-info">native dev</span>
-                                    <span class="badge badge-pill badge-info">machine learning</span>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Endorse</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+            <!-- Skills Column -->
+            <br>
+            <div>
+                <ul class="list-unstyled">
+                    <li *ngFor="let e of endorsements" class="media">
+                        <img src="assets/img/angular-icon.svg" class="align-self-center mr-3"
+                            style="width:64px;height:64px;" />
+                        <div class="media-body align-self-center">
+                            <h5 class="mt-0 mb-1">{{e.skill}} <span class="badge badge-success">{{e.count}}</span></h5>
+                            <span *ngFor="let tag of e.tags" class="badge badge-pill badge-info">{{tag}}</span>
+                        </div>
+                    </li>
+                    <br>
+
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

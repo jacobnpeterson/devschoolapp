@@ -1,6 +1,6 @@
 <div class="row" [class.top]="first">
   <div class="col-md-10">
-    <a routerLink="/profile">{{person.name}} - {{person.market}} - {{person.cohort}}</a>
+    <a routerLink="/profile/{{person.id}}">{{person.name}} - {{person.market}} - {{person.cohort}}</a>
   </div>
   <div class="col-md-2">
     <span class="badge badge-success">{{endorsements}}</span>
