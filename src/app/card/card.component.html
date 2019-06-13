@@ -7,12 +7,12 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <img [src]="iconUrl" />
+                <img [src]="iconUrl" class="icon"/>
             </div>
         </div>
 
-        <app-person-row-small></app-person-row-small>
-        <app-person-row-small></app-person-row-small>
-        <app-person-row-small></app-person-row-small>
+        <app-person-row-small *ngFor="let p of topPeople | slice:0:3; let i=index" [person]="p.person" [endorsements]="p.count" [first]="i===0"></app-person-row-small>
+        <!-- TODO: style top row -->
+    
     </div>
 </div>

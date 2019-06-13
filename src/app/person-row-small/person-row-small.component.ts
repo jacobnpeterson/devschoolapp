@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-person-row-small',
@@ -8,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class PersonRowSmallComponent implements OnInit {
 
   constructor() { }
+  @Input() person: {};
+  @Input() endorsements: string;
+  @Input() first: boolean;
 
   ngOnInit() {
   }
 
-  name = 'Jacob Peterson'
-  cohort = 'C1'
-  market = 'DAL'
-  endorsements = 23
 }
 
