@@ -32,21 +32,11 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4">
-    <app-card></app-card>
+  <div class="col-md-4" *ngFor="let skill of skills">
+    <app-card [name]="skill.name" [iconUrl]="skill.iconUrl"></app-card>
   </div>
-  <div class="col-md-4">
-    <app-card></app-card>
-  </div>
-  <div class="col-md-4">
-    <app-card></app-card>
-  </div>
-  <div class="col-md-4">
-    <app-card></app-card>
-  </div>
-  <div class="col-md-4">
-    <app-card></app-card>
-  </div>
+</div>
+
 
   
   <!-- Modal -->
@@ -58,5 +48,3 @@
       </div>
     </div>
   </div>
-
-</div>
