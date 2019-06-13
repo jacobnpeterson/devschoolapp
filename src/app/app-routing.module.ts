@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'skill', component: SkillComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 
 ];

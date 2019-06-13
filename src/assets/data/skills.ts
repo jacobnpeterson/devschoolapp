@@ -15,3 +15,25 @@ export var skills = [
     { name: "angular", iconUrl: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" },
     { name: "python", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" },
 ]
+
+// var endorsements = {
+//     "python": {
+//         tags: ["ML"],
+//         count: 1
+
+//     }
+// }
+
+var endorsements = [
+    {
+        skill: "python",
+
+    }
+] 
+// endorsements.python.tags.push("dog")
+
+// console.log(endorsements);
+
+// endorsements.entries().forEach(element => {
+//     console.log(element);
+// });
