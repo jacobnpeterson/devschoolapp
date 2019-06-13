@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EndorseComponent } from './endorse/endorse.component';
 import { LoginComponent } from './login/login.component';
 import { PersonRowSmallComponent } from './person-row-small/person-row-small.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { PersonRowSmallComponent } from './person-row-small/person-row-small.com
     ProfileComponent,
     EndorseComponent,
     LoginComponent,
-    PersonRowSmallComponent
+    PersonRowSmallComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
