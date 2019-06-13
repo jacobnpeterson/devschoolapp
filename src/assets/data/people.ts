@@ -1,11 +1,13 @@
 export var people = [
     {
+        id: 0,
         name: "Jacob Peterson",
         phone: "214-555-5255",
         email: "jacob.peterson@parivedasolutions.com",
         slack: "UANQBHVPS",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theoceanapi.azurewebsites.net/people/jacob-peterson/image_2x?dateTime=636960514248500000",
         endorsements: [
             {
                 skill: "Python",
@@ -71,12 +73,14 @@ export var people = [
 
     },
     {
+        id: 1,
         name: "Chris Dixon",
         phone: "214-555-5551",
         email: "chris.dixon@parivedasolutions.com",
         slack: "UK5UY08QY",
         cohort: "C1",
         market: "PHI", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "HTML",
