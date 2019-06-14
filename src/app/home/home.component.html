@@ -10,7 +10,7 @@
             <button ngbDropdownItem (click)="filterByMarket($event)">Chicago</button>
             <button ngbDropdownItem (click)="filterByMarket($event)">Dallas</button>
             <button ngbDropdownItem (click)="filterByMarket($event)">Houston</button>
-            <button ngbDropdownItem (click)="filterByMarket($event)">Los Angelos</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Los Angeles</button>
             <button ngbDropdownItem (click)="filterByMarket($event)">New York</button>
             <button ngbDropdownItem (click)="filterByMarket($event)">Philadelphia</button>
             <button ngbDropdownItem (click)="filterByMarket($event)">San Francisco</button>
@@ -41,7 +41,7 @@
     
     <div class="row">
       <div class="col-md-4" *ngFor="let skill of skills">
-        <app-card [name]="skill.name" [iconUrl]="skill.iconUrl"></app-card>
+        <app-card [name]="skill.name" [iconUrl]="skill.iconUrl" [market]="selectedMarket"></app-card>
       </div>
     </div>
     
