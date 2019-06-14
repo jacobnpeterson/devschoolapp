@@ -2,14 +2,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h1>Python <img src="http://www.iconarchive.com/download/i73027/cornmanthe3rd/plex/Other-python.ico"></h1>
+            <h1>{{skill}} <img src="{{imgSrc}}"></h1>
         </div>
     </div>
     <ul class="list-group">
-        <li *ngFor="let person of people" class="list-group-item"><app-person-row></app-person-row></li>
-        <li class="list-group-item"><app-person-row></app-person-row></li>
-        <li class="list-group-item"><app-person-row></app-person-row></li>
-        <li class="list-group-item"><app-person-row></app-person-row></li>
-        <li class="list-group-item"><app-person-row></app-person-row></li>
+        <li *ngFor="let person of skillPeople" class="list-group-item">
+            <app-person-row [person]="person"></app-person-row>
+        </li>
+
     </ul>
 </div>
