@@ -29,7 +29,11 @@ export class HomeComponent implements OnInit {
   }
 
   filterByMarket(e) {
-    this.selectedMarket = e.target.innerText;
+    if (e.target.innerText === "All Fins") {
+      this.selectedMarket = "";
+    } else {
+      this.selectedMarket = e.target.innerText;
+    }
   }
 
 
