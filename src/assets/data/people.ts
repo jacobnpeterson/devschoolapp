@@ -147,6 +147,7 @@ export var people = [
         slack: "UFRV3HHDJ",
         cohort: "C2",
         market: "NYC", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "css",
@@ -198,6 +199,7 @@ export var people = [
         slack: "UK4DPEY9J",
         cohort: "C1",
         market: "ATL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "ios",
@@ -249,6 +251,7 @@ export var people = [
         slack: "UJXCWA02D",
         cohort: "C1",
         market: "NYC", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "c++",
@@ -310,6 +313,7 @@ export var people = [
         slack: "UK3P8HQ6L",
         cohort: "C1",
         market: "HOU", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "asp.net",
@@ -391,6 +395,7 @@ export var people = [
         slack: "UGZ23FXMZ",
         cohort: "C1",
         market: "HOU", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "c#",
@@ -447,6 +452,7 @@ export var people = [
         slack: "UAQTVG8JX",
         cohort: "C1",
         market: "DC", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "javascript",
@@ -513,6 +519,7 @@ export var people = [
         slack: "UJTHWDCE7",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "reactjs",
@@ -574,6 +581,7 @@ export var people = [
         slack: "UK4FEH7U4",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "swift",
@@ -630,6 +638,7 @@ export var people = [
         slack: "UK6PYBVT9",
         cohort: "C1",
         market: "LA", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "sql",
@@ -691,6 +700,7 @@ export var people = [
         slack: "UK2DGEA4D",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "node.js",
@@ -757,6 +767,7 @@ export var people = [
         slack: "UK3P8Q9KJ",
         cohort: "C1",
         market: "CHI", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "android",
@@ -818,6 +829,7 @@ export var people = [
         slack: "UK1UG2H7W",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "java",
@@ -884,6 +896,7 @@ export var people = [
         slack: "UK4UZTN7J",
         cohort: "C1",
         market: "DAL", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "angular",
@@ -945,6 +958,7 @@ export var people = [
         slack: "UK26CSFBJ",
         cohort: "C1",
         market: "LA", 
+        photo: "https://theocean.parivedasolutions.com/assets/images/person.svg",
         endorsements: [
             {
                 skill: "c#",
