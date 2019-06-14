@@ -16,8 +16,32 @@ export class SkillComponent implements OnInit {
   tags = tags;
   people = people;
   skills = skills;
-  skill: any;
+  skill: string;
+  imgSrc: string;
+  skillPeople = new Array();
 
-  ngOnInit() { this.skill = skills[this.route.snapshot.params['name']]; }
+  ngOnInit() {
+    // Assign `skill` to correct skill
+    this.skill = this.route.snapshot.params['name'];
+    // alert(this.skill);
+
+    // Fetch icon url
+    this.skills.forEach(element => {
+      if(element.name == this.skill) {
+        this.imgSrc = element.iconUrl;
+      }
+    });
+    // alert(this.imgSrc);
+
+    // Populate people only on that page
+    this.people.forEach(person => {
+      if(person.endorsements.filter(end => end.skill.toLowerCase() == this.skill).length > 0) {
+        this.skillPeople.push(person);
+      }
+    });
+    // alert(this.skillPeople.length);
+
+
+  }
 
 }

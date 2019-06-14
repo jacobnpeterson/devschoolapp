@@ -1,15 +1,17 @@
 <div class="row">
   <div class="col-md-3">
-    <a routerLink="/profile">Jacob Peterson</a>
+    <a routerLink="/profile/{{person.id}}">{{person.name}}</a>
   </div>
   <div class="col-md-3">
-    <span class="badge badge-secondary badge-pill">Pandas</span>
-    <span class="badge badge-secondary badge-pill">Django</span>
-    <span class="badge badge-secondary badge-pill">NLP</span>
+    <span *ngFor="let end of endNames" class="badge badge-secondary badge-pill">
+      {{end}}
+    </span>
   </div><div class="col-md-3">
-    DAL - C1
+    {{descripString}}
   </div>
   <div class="col-md-3">
-    <span class="badge badge-success right">21</span>
+    <span class="badge badge-success right">
+      {{endCount}}
+    </span>
   </div>
 </div>
