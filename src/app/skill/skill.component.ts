@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { tags } from '../../assets/data/tags';
+import { people } from '../../assets/data/people';
+import { skills } from '../../assets/data/skills';
 
 @Component({
   selector: 'app-skill',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
-  }
+  tags = tags;
+  people = people;
+  skills = skills;
+  skill: any;
+
+  ngOnInit() { this.skill = skills[this.route.snapshot.params['name']]; }
 
 }

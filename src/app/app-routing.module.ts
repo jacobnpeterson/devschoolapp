@@ -6,7 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'skill', component: SkillComponent },
+  { path: 'skill/:name', component: SkillComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'profile/:id', component: ProfileComponent },
