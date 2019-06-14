@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { skills } from '../../assets/data/skills'
+import { skills } from '../../assets/data/skills';
+import { people } from '../../assets/data/people';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,27 @@ import { skills } from '../../assets/data/skills'
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  
+  skills = skills;
+  people = people;
+  searchResults: any;
+  selectedMarket: string;
 
   ngOnInit() {
   }
 
-  skills = skills
+  searchPeople(e) {
+    let text = e.target.value.toLocaleLowerCase();
+    if (text.length > 0) {
+      this.searchResults = people.filter(p => p.name.toLocaleLowerCase().includes(text));
+    } else {
+      this.searchResults = undefined;
+    }
+  }
+
+  filterByMarket(e) {
+    this.selectedMarket = e.target.innerText;
+  }
+
 
 }

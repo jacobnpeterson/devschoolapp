@@ -2,36 +2,41 @@
 <div class="container">
     <div class="row my-5">
       <div class="col-md-2">
-          <div class="dropdown show text-right">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Market
-            </a>
-      
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Atlanta</a>
-              <a class="dropdown-item" href="#">Chicago</a>
-              <a class="dropdown-item" href="#">Dallas</a>
-              <a class="dropdown-item" href="#">Houston</a>
-              <a class="dropdown-item" href="#">Los Angelos</a>
-              <a class="dropdown-item" href="#">New York</a>
-              <a class="dropdown-item" href="#">Philadelphia</a>
-              <a class="dropdown-item" href="#">San Francisco</a>
-              <a class="dropdown-item" href="#">Seattle</a>
-              <a class="dropdown-item" href="#">Toronto</a>
-              <a class="dropdown-item" href="#">Wsashington D.C</a>
-            </div>
+        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+          <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Market Filter</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownManual">
+            <button ngbDropdownItem (click)="filterByMarket($event)">All Fins</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Atlanta</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Chicago</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Dallas</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Houston</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Los Angelos</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">New York</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Philadelphia</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">San Francisco</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Seattle</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Toronto</button>
+            <button ngbDropdownItem (click)="filterByMarket($event)">Washington D.C</button>
           </div>
         </div>
-      <div class="col-md-8">
-        <h1 class="text-center">Subject Matter Experts</h1>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <h1 class="text-center">{{selectedMarket}} Subject Matter Experts</h1>
+      </div>
+      <div class="col-md-3">
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Find a Fin" aria-label="Search">
-          
+          <input (input)="searchPeople($event)" class="form-control full" type="search" placeholder="Find a Fin" aria-label="Search">
         </form>
+        <div class="results-parent">
+          <ul class="list-group results">
+            <li *ngFor="let person of searchResults" class="list-group-item">
+              <a routerLink="/profile/{{person.id}}">{{person.name}}</a>
+            </li>
+          </ul>
+        </div>
       </div>
+      
     </div>
     
     <div class="row">

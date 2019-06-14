@@ -12,8 +12,10 @@ export class CardComponent implements OnInit {
   
   @Input() name: string;
   @Input() iconUrl: string;
-  people = people
-  topPeople: {}[]
+  @Input() market: string;
+  people = people;
+  topPeople: {}[];
+
 
   ngOnInit() {
     this.topPeople = people.map(p => ({
