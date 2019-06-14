@@ -28,21 +28,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.person = people[this.route.snapshot.params['id']]
-    // let skillsArray = []
-    // this.person.endorsements.forEach(e => {
-    //   let skill = skillsArray.filter(s => s.skill = e.skill)[0];
-    //   if (skill) {
-    //     //augment
-
-    //   } else {
-    //     skillsArray.push({
-    //       skill: e.skill,
-    //       tags: e.tag,
-    //       count: 1
-    //     });
-    //   }
-    // });
-    // this.personSkills = skillsArray 
     this.person.endorsements = this.person.endorsements.sort((a,b) => {
       if (a.skill < b.skill) return 1;
       else if (a.skill > b.skill) return -1;
@@ -57,20 +42,22 @@ export class ProfileComponent implements OnInit {
         endorsementArray.push({
           skill: lastSkill,
           tags: new Set(tags),
-          count: count
+          count: count,
+          icon: this.allSkills.filter(s => s.name.toLowerCase() === lastSkill.toLowerCase())[0].iconUrl
         });
         count = 0;
         tags = [];
       }
       count++;
-      tags = tags + e.tag
+      tags = tags.concat(e.tag);
 
       lastSkill = e.skill
     });
     endorsementArray.push({
       skill: lastSkill,
       tags: new Set(tags),
-      count: count
+      count: count,
+      icon: this.allSkills.filter(s => s.name.toLowerCase() === lastSkill.toLowerCase())[0].iconUrl
     });
     this.endorsements = endorsementArray;
   }

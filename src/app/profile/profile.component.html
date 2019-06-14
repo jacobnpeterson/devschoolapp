@@ -34,12 +34,9 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="select_tech">With which technology did Stephen help you?</label>
+                                    <label for="select_tech">With which technology did {{person.name}} help you?</label>
                                     <select class="form-control" id="select_tech">
-                                        <option>Angular</option>
-                                        <option>C++</option>
-                                        <option>JavaScript</option>
-                                        <option>MongoDB</option>
+                                        <option *ngFor="let skill of allSkills">{{skill.name}}</option>
                                         <option>Other</option>
                                     </select>
                                 </div>
@@ -69,8 +66,8 @@
             <br>
             <div>
                 <ul class="list-unstyled">
-                    <li *ngFor="let e of endorsements" class="media">
-                        <img src="assets/img/angular-icon.svg" class="align-self-center mr-3"
+                    <li *ngFor="let e of endorsements" class="media py-2" >
+                        <img [src]="e.icon" class="align-self-center mr-3"
                             style="width:64px;height:64px;" />
                         <div class="media-body align-self-center">
                             <h5 class="mt-0 mb-1">{{e.skill}} <span class="badge badge-success">{{e.count}}</span></h5>
