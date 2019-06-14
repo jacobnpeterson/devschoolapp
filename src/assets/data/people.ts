@@ -140,6 +140,7 @@ export var people = [
         ]
     },
     {
+        id: 2,
         name: "Ben Hurley",
         phone: "214-555-5455",
         email: "ben.hurley@parivedasolutions.com",
@@ -189,7 +190,8 @@ export var people = [
             },
         ]
     },
-    {
+    {   
+        id: 3,
         name: "Ben Randolph",
         phone: "214-755-5455",
         email: "ben.randolph@parivedasolutions.com",
@@ -240,6 +242,7 @@ export var people = [
         ]
     },
     {
+        id: 4,
         name: "Daniel Enciso",
         phone: "214-755-5455",
         email: "daniel.enciso@parivedasolutions.com",
@@ -300,6 +303,7 @@ export var people = [
         ]
     },
     {
+        id: 5,
         name: "Edmund Pan",
         phone: "214-755-8655",
         email: "edmund.pan@parivedasolutions.com",
@@ -380,6 +384,7 @@ export var people = [
         ]
     },
     {
+        id: 6,
         name: "Graham Watson",
         phone: "124-755-8655",
         email: "graham.watson@parivedasolutions.com",
@@ -435,6 +440,7 @@ export var people = [
         ]
     },
     {
+        id: 7,
         name: "Jennifer Qian",
         phone: "124-712-8655",
         email: "jennifer.qian@parivedasolutions.com",
@@ -500,6 +506,7 @@ export var people = [
         ]
     },
     {
+        id: 8,
         name: "Justin Mcginnity",
         phone: "124-712-8655",
         email: "justin.mcginnity@parivedasolutions.com",
@@ -560,6 +567,7 @@ export var people = [
         ]
     },
     {
+        id: 9,
         name: "Levi Bowser",
         phone: "124-111-8655",
         email: "levi.bowser@parivedasolutions.com",
@@ -615,6 +623,7 @@ export var people = [
         ]
     },
     {
+        id: 10,
         name: "Matt Marano",
         phone: "987-654-3210",
         email: "matt.marano@parivedasolutions.com",
@@ -675,6 +684,7 @@ export var people = [
         ]
     },
     {
+        id: 11,
         name: "Mccann Dahl",
         phone: "987-126-3210",
         email: "mccann.dahl@parivedasolutions.com",
@@ -740,6 +750,7 @@ export var people = [
         ]
     },
     {
+        id: 12,
         name: "Tanner Watkins",
         phone: "989-898-9898",
         email: "tan.wat@parivedasolutions.com",
@@ -800,6 +811,7 @@ export var people = [
         ]
     },
     {
+        id: 13,
         name: "William Flores",
         phone: "123-123-1234",
         email: "will.flores@parivedasolutions.com",
@@ -865,6 +877,7 @@ export var people = [
         ]
     },
     {
+        id: 14,
         name: "Zach Hartzog",
         phone: "121-212-1212",
         email: "zach.hartzog@parivedasolutions.com",
@@ -925,6 +938,7 @@ export var people = [
         ]
     },
     {
+        id: 15,
         name: "Alex Pratt",
         phone: "678-287-0009",
         email: "alex.pratt@parivedasolutions.com",
@@ -955,10 +969,3 @@ export var people = [
         ]
     }
 ]
-
-// // var filteredPeople = people.filter(p => p.endorsements.map(e => e.skill).includes("HTML"))
-// var mappedPeople = people.map(p => ({
-//     name: p.name,   
-//     count: p.endorsements.filter(e => e.skill === "HTML").length
-//     }));
-// console.log(mappedPeople);
