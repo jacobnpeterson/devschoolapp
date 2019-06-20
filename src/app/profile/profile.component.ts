@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 import { switchMap, last } from 'rxjs/operators';
 import { AutocompleteComponent } from '../autocomplete/autocomplete.component';
 import { tags } from '../../assets/data/tags';
@@ -16,7 +17,8 @@ import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 export class ProfileComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer
   ) { }
 
   tagArray = tags;
@@ -73,6 +75,10 @@ export class ProfileComponent implements OnInit {
 
   // Called when Endorse button is pressed, sends all endorsements to JSON data store
   addEndorsements() {
+z
+  }
 
+  sanitize(url:string){
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 }
